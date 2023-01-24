@@ -22,7 +22,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag thesuhu/docker-cron:latest
+      run: docker build alpine/. --file alpine/Dockerfile --tag thesuhu/docker-cron:latest
      
     - name: Docker Push
       run: docker push ${{secrets.DOCKER_USER}}/docker-cron:latest
