@@ -23,7 +23,7 @@ First, create config file. For example create file `cronjobs`:
 *       *       *       *       *       echo "${CUSTOM_ENV_VAR}"
 ```
 
-Then change ownership to root `chown root:root crontabs` and run container and mount config file to `/etc/crontabs/root` inside container: 
+Then change ownership to root `sudo chown root:root crontabs` and run container and mount config file to `/etc/crontabs/root` inside container: 
 
 ```sh
 docker run -d --name cron -e CUSTOM_ENV_VAR=foobar -v `pwd`/cronjobs:/etc/crontabs/root thesuhu/docker-cron
