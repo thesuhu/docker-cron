@@ -1,8 +1,8 @@
-FROM debian:buster-slim
+FROM ubuntu:latest
 
 # in case job need curl
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install -y cron curl \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install -y cron nano curl \
     && rm -rf /var/lib/apt/lists/* \
     && which cron \
     && rm -rf /etc/cron.*/*
