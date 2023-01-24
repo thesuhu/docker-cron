@@ -1,4 +1,4 @@
-FROM buster-slim
+FROM debian:buster-slim
 
 # in case job need curl
 RUN apt-get update \
