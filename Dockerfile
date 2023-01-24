@@ -1,4 +1,4 @@
-FROM busybox:latest
+FROM buster-slim
 
 # in case job need curl
 RUN apt-get update \
